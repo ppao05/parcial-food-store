@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<a
+  href="../../auth/login/login.html"
+  class="back-login-btn"
+>
+  ← Volver al Login
+</a>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Admin Panel</title>
 </head>
 
 <body>
-    <h1>Hola desde la vista de admin</h1>
-    <button id="logoutButton">Logout</button>
-    <script type="module" src="./home.ts"></script>
+
+  <div class="admin-container">
+
+    <h1 class="admin-title">
+      Panel Administrador ⚙️
+    </h1>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <h2 id="total-products">0</h2>
+        <p>Productos Totales</p>
+      </div>
+
+      <div class="stat-card">
+        <h2 id="available-products">0</h2>
+        <p>Productos Disponibles</p>
+      </div>
+
+      <div class="stat-card">
+        <h2 id="out-stock">0</h2>
+        <p>Sin Stock</p>
+      </div>
+
+      <div class="stat-card">
+        <h2 id="total-categories">0</h2>
+        <p>Categorías</p>
+      </div>
+
+    </div>
+
+    <a
+      href="../../store/home/home.html"
+      class="go-store-btn"
+    >
+      Ir al Food Store
+    </a>
+
+  </div>
+
+  <script type="module" src="./home.ts"></script>
+
 </body>
-
-
 </html>

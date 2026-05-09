@@ -1,19 +1,28 @@
-import { checkAuhtUser, logout } from "../../../utils/auth";
+import "../../../style.css";
 
-const buttonLogout = document.getElementById(
-  "logoutButton"
-) as HTMLButtonElement;
-buttonLogout?.addEventListener("click", () => {
-  logout();
-});
+import { PRODUCTS, getCategories } from "../../../data/data";
 
+const totalProducts = document.getElementById("total-products");
+const availableProducts = document.getElementById("available-products");
+const outStock = document.getElementById("out-stock");
+const totalCategories = document.getElementById("total-categories");
 
-const initPage = () => {
-  console.log("inicio de pagina");
-  checkAuhtUser(
-    "/src/pages/auth/login/login.html",
-    "/src/pages/client/home/home.html",
-    "admin"
-  );
-};
-initPage();
+if (
+  totalProducts &&
+  availableProducts &&
+  outStock &&
+  totalCategories
+) {
+  totalProducts.textContent = PRODUCTS.length.toString();
+
+  availableProducts.textContent = PRODUCTS
+    .filter((p) => p.disponible)
+    .length.toString();
+
+  outStock.textContent = PRODUCTS
+    .filter((p) => p.stock === 0)
+    .length.toString();
+
+  totalCategories.textContent = getCategories()
+    .length.toString();
+}

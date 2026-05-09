@@ -1,30 +1,29 @@
-import type { IUser } from "../../../types/IUser";
-import type { Rol } from "../../../types/Rol";
-import { navigate } from "../../../utils/navigate";
+import "../../../style.css";
 
-const form = document.getElementById("form") as HTMLFormElement;
-const inputEmail = document.getElementById("email") as HTMLInputElement;
-//const inputPassword = document.getElementById("password") as HTMLInputElement;
-const selectRol = document.getElementById("rol") as HTMLSelectElement;
+const form = document.getElementById("login-form") as HTMLFormElement;
 
-form.addEventListener("submit", (e: SubmitEvent) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const valueEmail = inputEmail.value;
-  //const valuePassword = inputPassword.value;
-  const valueRol = selectRol.value as Rol;
 
-  if (valueRol === "admin") {
-    navigate("/src/pages/admin/home/home.html");
-  } else if (valueRol === "client") {
-    navigate("/src/pages/client/home/home.html");
+  const email = (
+    document.getElementById("email") as HTMLInputElement
+  ).value;
+
+  const password = (
+    document.getElementById("password") as HTMLInputElement
+  ).value;
+
+  // ADMIN
+  if (email === "admin@gmail.com" && password === "1234") {
+    window.location.href = "../../admin/home/home.html";
+    return;
   }
 
-  const user: IUser = {
-    email: valueEmail,
-    role: valueRol,
-    loggedIn: true,
-  };
+  // CLIENTE
+  if (email === "user@gmail.com" && password === "1234") {
+    window.location.href = "../../store/home/home.html";
+    return;
+  }
 
-  const parseUser = JSON.stringify(user);
-  localStorage.setItem("userData", parseUser);
+  alert("Credenciales incorrectas");
 });

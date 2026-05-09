@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Store</title>
+
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">Food Store</h1>
+    <div class="header-actions">
+
+  <a
+    href="../../auth/login/login.html"
+    class="back-login-btn"
+  >
+    ← Login
+  </a>
+
+  <a
+    href="../cart/cart.html"
+    class="cart-link"
+  >
+    Carrito 🛒
+    <span id="cart-count" class="badge">0</span>
+  </a>
+
+</div>
+  </header>
+
+  <div class="main-container">
+
+    <aside class="sidebar">
+      <h2>Categorías</h2>
+
+      <div id="categories" class="categories"></div>
+    </aside>
+
+    <main class="content">
+      <input
+        type="text"
+        id="search"
+        placeholder="Buscar productos..."
+        class="search"
+      />
+
+       <div id="products" class="grid"></div>
+    </main>
+
+  </div>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>
