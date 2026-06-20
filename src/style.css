@@ -635,3 +635,46 @@ body {
   text-align: center;
   padding: 40px;
 }
+
+.order-card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.order-card h3 {
+  margin-bottom: 10px;
+}
+
+.order-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.badge-pendiente {
+  background-color: orange;
+}
+
+.badge-preparacion {
+  background-color: #3b82f6;
+}
+
+.badge-entregado {
+  background-color: #22c55e;
+}
+
+.badge-cancelado {
+  background-color: #ef4444;
+}
+
+.empty-orders {
+  text-align: center;
+  padding: 40px;
+}
