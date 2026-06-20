@@ -14,13 +14,13 @@ form.addEventListener("submit", (e) => {
   ).value;
 
   // ADMIN
-  if (email === "admin@gmail.com" && password === "1234") {
+  if (email === "admin@admin.com" && password === "123456") {
     window.location.href = "../../admin/home/home.html";
     return;
   }
 
   // CLIENTE
-  if (email === "user@gmail.com" && password === "1234") {
+  if (email === "cliente@food.com" && password === "cliente123") {
     window.location.href = "../../store/home/home.html";
     return;
   }
