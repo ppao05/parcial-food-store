@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<a
-  href="../../auth/login/login.html"
-  class="back-login-btn"
->
-  ← Volver al Login
-</a>
-
 <head>
   <meta charset="UTF-8" />
   <title>Carrito</title>
-
 </head>
-<body>
 
+<body>
   <header class="header">
     <h1 class="logo">Mi carrito</h1>
 
-    <a href="../home/home.html" class="cart-link">
-      ← Volver
-    </a>
+    <div class="header-actions">
+      <a href="../../auth/login/login.html" class="back-login-btn">
+        ← Login
+      </a>
+
+      <a href="../home/home.html" class="cart-link">
+        ← Volver a la tienda
+      </a>
+    </div>
   </header>
 
-  <div class="cart-container">
+  <main class="cart-container">
     <div id="cart"></div>
 
-    <h2 id="total" class="total"></h2>
+    <section id="summary" class="cart-summary">
+      <p id="subtotal"></p>
+      <p id="shipping"></p>
+      <h2 id="total" class="total"></h2>
+    </section>
+
+    <section id="checkout" class="checkout-box">
+      <h2>Datos del pedido</h2>
+
+      <form id="checkout-form">
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Teléfono de contacto"
+          required
+        />
+
+        <select id="payment" required>
+          <option value="">Seleccionar forma de pago</option>
+          <option value="EFECTIVO">Efectivo</option>
+          <option value="TARJETA">Tarjeta</option>
+          <option value="TRANSFERENCIA">Transferencia</option>
+        </select>
+
+        <button type="submit" class="add-btn">
+          Confirmar pedido
+        </button>
+      </form>
+    </section>
 
     <button id="clear-cart" class="clear-btn">
       Vaciar carrito
     </button>
-  </div>
+  </main>
 
   <script type="module" src="./cart.ts"></script>
 </body>
