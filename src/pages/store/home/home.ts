@@ -1,11 +1,14 @@
 import "../../../style.css";
 import { PRODUCTS, getCategories } from "../../../data/data";
 import { addToCart, getCartCount } from "../../../utils/cart";
+import { requireRole } from "../../../utils/auth";
 
 const container = document.getElementById("products")!;
 const searchInput = document.getElementById("search") as HTMLInputElement;
 const categoriesContainer = document.getElementById("categories")!;
 const badge = document.getElementById("cart-count")!;
+
+requireRole("USUARIO");
 
 let filteredProducts = PRODUCTS.filter((p) => p.disponible);
 

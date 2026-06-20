@@ -4,6 +4,9 @@ import {
   saveCart,
   getCartCount,
 } from "../../../utils/cart";
+import { requireRole } from "../../../utils/auth";
+
+requireRole("USUARIO");
 
 const container = document.getElementById("cart")!;
 const totalEl = document.getElementById("total")!;

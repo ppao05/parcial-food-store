@@ -1,6 +1,9 @@
 import "../../../style.css";
 
 import { PRODUCTS, getCategories } from "../../../data/data";
+import { requireRole } from "../../../utils/auth";
+
+requireRole("ADMIN");
 
 const totalProducts = document.getElementById("total-products");
 const availableProducts = document.getElementById("available-products");
