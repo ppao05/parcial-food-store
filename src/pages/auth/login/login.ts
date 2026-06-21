@@ -30,11 +30,20 @@ form.addEventListener("submit", async (e) => {
       throw new Error("No se pudo cargar usuarios.json");
     }
 
-    const usuarios: Usuario[] = await response.json();
+    const usuariosJson: Usuario[] = await response.json();
 
-    const usuario = usuarios.find(
-      (u) => u.mail === email && u.password === password
-    );
+    const usuariosLocal: Usuario[] = JSON.parse(
+  localStorage.getItem("usuariosLocal") || "[]"
+);
+
+    const usuarios: Usuario[] = [
+  ...usuariosJson,
+  ...usuariosLocal,
+];
+
+  const usuario = usuarios.find(
+  (u) => u.mail === email && u.password === password
+);
 
     if (!usuario) {
       alert("Credenciales incorrectas o usuario inexistente");

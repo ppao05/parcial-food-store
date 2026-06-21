@@ -1,14 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Registro - Food Store</title>
 </head>
 
-<body>
-    <h1>Hola desde el registro</h1>
-</body>
+<body class="login-body">
 
+  <div class="login-container">
+
+    <h1 class="login-title">Food Store 🍔</h1>
+
+    <p class="login-subtitle">
+      Crear cuenta de cliente
+    </p>
+
+    <form id="register-form" class="login-form">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Nombre"
+        required
+      />
+
+      <input
+        type="text"
+        id="lastname"
+        placeholder="Apellido"
+        required
+      />
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Celular"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Contraseña"
+        required
+      />
+
+      <button type="submit">
+        Registrarme
+      </button>
+
+    </form>
+
+    <div class="demo-users">
+      <p>
+        ¿Ya tenés cuenta?
+        <a href="../login/login.html" class="register-link">
+          Iniciar sesión
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <script type="module" src="./registro.ts"></script>
+
+</body>
 </html>
