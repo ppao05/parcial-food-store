@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorías</title>
+</head>
+
+<body>
+
+<header class="header">
+  <h1 class="logo">Gestión de Categorías</h1>
+
+  <div class="header-actions">
+    <a href="../home/home.html" class="back-login-btn">
+      ← Dashboard
+    </a>
+  </div>
+</header>
+
+<main class="content">
+
+  <section class="admin-form-box">
+    <h2 id="form-title">Nueva Categoría</h2>
+
+    <form id="category-form">
+      <input
+        type="hidden"
+        id="category-id"
+      >
+
+      <input
+        type="text"
+        id="category-name"
+        placeholder="Nombre"
+        required
+      >
+
+      <input
+        type="text"
+        id="category-description"
+        placeholder="Descripción"
+        required
+      >
+
+      <button type="submit" class="add-btn">
+        Guardar
+      </button>
+
+      <button type="button" id="cancel-edit" class="back-login-btn">
+        Cancelar edición
+      </button>
+    </form>
+  </section>
+
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody id="categories-body"></tbody>
+  </table>
+
+</main>
+
+<script type="module" src="./categories.ts"></script>
+
+</body>
+</html>
