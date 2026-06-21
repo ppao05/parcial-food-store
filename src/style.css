@@ -752,3 +752,15 @@ body {
   gap: 8px;
   color: white;
 }
+
+.order-actions {
+  margin-top: 15px;
+}
+
+.status-select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #334155;
+  color: white;
+}

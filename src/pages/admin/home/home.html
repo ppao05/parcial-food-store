@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<a
-  href="../../auth/login/login.html"
-  class="back-login-btn"
->
-  ← Volver al Login
-</a>
-
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,11 +9,35 @@
 
 <body>
 
+  <header class="header">
+    <h1 class="logo">Panel Administrador ⚙️</h1>
+
+    <div class="header-actions">
+      <a href="../../auth/login/login.html" class="back-login-btn">
+        ← Login
+      </a>
+
+      <a href="../../store/home/home.html" class="cart-link">
+        Ver Tienda
+      </a>
+    </div>
+  </header>
+
   <div class="admin-container">
 
-    <h1 class="admin-title">
-      Panel Administrador ⚙️
-    </h1>
+    <div class="admin-nav">
+      <a href="../categories/categories.html" class="go-store-btn">
+        Categorías
+      </a>
+
+      <a href="../products/products.html" class="go-store-btn">
+        Productos
+      </a>
+
+      <a href="../orders/orders.html" class="go-store-btn">
+        Pedidos
+      </a>
+    </div>
 
     <div class="stats-grid">
 
@@ -46,28 +62,6 @@
       </div>
 
     </div>
-
-    <a
-      href="../../store/home/home.html"
-      class="go-store-btn"
-    >
-
-    <a
-  href="../categories/categories.html"
-  class="go-store-btn"
->
-  Categorías
-</a>
-
-<a
-  href="../products/products.html"
-  class="go-store-btn"
->
-  Productos
-</a>
-
-      Ir al Food Store
-    </a>
 
   </div>
 

@@ -17,6 +17,7 @@ export default defineConfig({
         clientOrders: resolve(__dirname, "src/pages/client/orders/orders.html"),
         adminCategories: resolve(__dirname,"src/pages/admin/categories/categories.html"),
         adminProducts: resolve(__dirname,"src/pages/admin/products/products.html"),
+        adminOrders: resolve(__dirname,"src/pages/admin/orders/orders.html"),
       },
     },
   },

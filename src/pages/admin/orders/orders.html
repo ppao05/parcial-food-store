@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedidos</title>
+</head>
+
+<body>
+
+<header class="header">
+  <h1 class="logo">Gestión de Pedidos</h1>
+
+  <div class="header-actions">
+    <a
+      href="../home/home.html"
+      class="back-login-btn"
+    >
+      ← Dashboard
+    </a>
+  </div>
+</header>
+
+<main class="content">
+
+  <div class="admin-form-box">
+
+    <label>
+      Filtrar por estado:
+    </label>
+
+    <select id="status-filter">
+      <option value="TODOS">Todos</option>
+      <option value="PENDIENTE">Pendiente</option>
+      <option value="EN_PREPARACION">En preparación</option>
+      <option value="ENTREGADO">Entregado</option>
+      <option value="CANCELADO">Cancelado</option>
+    </select>
+
+  </div>
+
+  <div id="orders-container"></div>
+
+</main>
+
+<script type="module" src="./orders.ts"></script>
+
+</body>
+</html>
